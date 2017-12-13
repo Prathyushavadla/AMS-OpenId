@@ -1,0 +1,105 @@
+#if($template-code == "createAMSUser")
+Hi $userName,
+
+Greetings from AMS,
+
+Your account has been created in https://portal-dev.mdstrat.com/ using this e-mail address.We are delighted to have you as a user.To explore more we request you to login.
+
+Please find below your login information:			
+Your E-Mail ID :	$emailId	
+Your Password  :	$password
+
+Thank you!
+
+#elseif($template-code == "adminApprovesReadonlyUser"
+|| $template-code == "addStandardUser" || $template-code == "addSystemUser")
+Hi $userName,
+
+We are glad to have you as the user of CLICS Mobile App.
+
+CLICS is a Clinical Image Capture and Storage app designed to provide a secure way of sharing clinical images for medical staff across multiple campuses.To experience more features we request you to login.
+
+Please find below your login information:
+Your E-Mail ID :	$emailId	
+Your Password  :	$password
+
+Thank you!
+
+#elseif($template-code == "convertingExternalUserToStandardUser")
+Hi $userName,
+
+Your role has been changed from External user to StandardUser.Please use the following credentials to login to CLICS App.
+
+User Name: $emailId
+API Key  : $apiKey
+
+Thank you!.
+
+#elseif($template-code == "addTeamAdmin")
+Hi $adminUserName,
+
+Greetings from CLICS,
+
+Your account has been created in https://secure.clics.io using this e-mail address.We are delighted to have you as a registered user.To explore more we request you to login.
+
+Please find below your login information:			
+Your E-Mail ID :	$emailId	
+Your Password  :	$password
+
+Thank you!
+
+#elseif($template-code == "deleteTeamAdmin")
+Hi $adminUserName,
+
+As your role has been changed to StandardUser, you are not authorized to use CLICS Web Application.
+
+Thank you!
+
+#elseif($template-code == "enablingUserFromWebApp")
+Hi $userName,
+
+Your CLICS account has been activated. Please use the following credentials to login to CLICS App.
+
+User Name: $emailId
+API Key  : $apiKey
+
+Thank you!
+
+#elseif($template-code == "welcomeMail")
+Hello $userFirstName,
+
+I noticed that you recently installed CLICS on your iPhone and connected to the CLICS $message
+
+At Incarta we are focused on developing the most secure and relevant clinical tools for our clinical partners. I wanted to contact you to check that you have all you need to make sure your experience with using CLICS is both positive and productive. If you have any comments on your experience, positive or negative, I would be grateful if you would email me directly by replying to feedback@clics.io. And of course, if you have any ideas as to how we could improve the App, please let me know.
+
+Please remember that Incarta support is available 24/7 on 1300 137 557 for Australian users. We are always glad to help!
+
+Thank you very much for choosing CLICS as your secure clinical imaging App. We are humbled that you chose us and proud to have you as a valued client!
+
+Once again, welcome and enjoy your stay!
+
+Gratefully Yours,
+Dr Nicholas Young
+Managing Director
+Incarta IT.
+
+#elseif($template-code == "regeneratePassword")
+Hi $adminUserName,
+
+APIkey for your CLICS account has been updated.Please use the following updated API Key to login to CLICS App.
+
+User Name: $emailId
+Updated API Key: $newPassword
+
+Thank you!
+
+#elseif($template-code == "mailForScreenshotAlert")
+Hi $adminUserName,
+
+$userName has taken the screenshot of the CLICS App.
+
+Screenshot Timestamp - $screenshotTimeStamp
+
+Thank you!
+
+#end
