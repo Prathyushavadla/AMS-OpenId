@@ -40,7 +40,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<configuration>
-					<warName>openid-connect-server-webapp</warName>
+					<warName>ROOT</warName>
 					<webResources>
 						<resource>
 							<directory>src/main/webapp</directory>
